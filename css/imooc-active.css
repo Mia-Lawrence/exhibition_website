@@ -1,0 +1,19 @@
+/* 导航栏 _status_back */
+.header{ transition: all 1s; }
+.header_status_back{ height: 38px; line-height: 38px; margin-top: 0; background-color: rgba(255, 255, 255,.8); position: fixed; top: 0; right: 0; left: 0; z-index: 3; }
+.header_status_back .header__nav__item,
+.header_status_back .header__nav__item__button{ color: #000; }
+.header_status_back .header__nav__item__button{ top: -2px; }
+
+/* 导航栏_state_active */
+.header__caption_state_active{ color: #000; }
+.header__nav__item_state_active,
+.header_status_back .header__nav__item_state_active{ font-weight: bold; }
+
+/* 侧边导航栏_active */
+.side-nav-item_state_active{ color: #ff0000; }
+.side-nav_status_show{ opacity: 1; transform: translate(0, 0); transition: all 1s; }
+
+/* 导航栏原先的下划线样式 被滑动门元素代替 */
+/* .header__nav__item_state_active::after{ content: ' '; display: block; width: 100%; height: 2px; position: absolute; left: 0; bottom: 0; background-color: #ff0000;
+} */

@@ -1,0 +1,122 @@
+/* 第二屏火箭和第三屏程序语言的晃动动画 */
+@-webkit-keyframes shake { 0% {transform: translate(0,-20%);} 30% {transform: translate(0,0);} 60% {transform: translate(0,-10%);} 100% {transform: translate(0,0);} }
+@-ms-keyframes shake { 0% {transform: translate(0,-20%);} 30% {transform: translate(0,0);} 60% {transform: translate(0,-10%);} 100% {transform: translate(0,0);} }
+
+/* 第三屏呼吸灯效果 */
+@-webkit-keyframes breatheIn{ from{ transform: scale(.9); } to{ transform: scale(1); } }
+@keyframes breatheIn{ from{ transform: scale(.9); } to{ transform: scale(1); } }
+@-webkit-keyframes breatheOut{ from{ transform: scale(1); } to{ transform: scale(1.1); } }
+@keyframes breatheOut{ from{ transform: scale(1); } to{ transform: scale(1.1); } }
+
+/*第四屏的缩放动画*/
+@-webkit-keyframes bigger { 0% {transform: scale(0.2);} 50% {transform: scale(0.6);} 100% {transform: scale(1);} }
+@-ms-keyframes bigger { 0% {transform: scale(0.2);} 50% {transform: scale(0.6);} 100% {transform: scale(1);} }
+
+/* 导航栏 */
+.header__wrap_animate_init{ width: 100%; height: 38px; opacity: 0; transform: translate(0, -100%); }
+.header__wrap_animate_done{ width: 100%; height: 38px; opacity: 1; transform: translate(0, 0); transition: all 1s; }
+
+/* 第一屏 */
+.screen-1__title_animate_done{ transition: all 1s; }
+.screen-1__subtitle_animate_done{ transition: all 1s .5s; }
+.screen-1__title_animate_init{ transform: translate(0,100%) }
+.screen-1__subtitle_animate_init{ opacity: 0; transform: translate(0,300%); }
+.screen-1__title_animate_done,
+.screen-1__subtitle_animate_done{ opacity: 1; transform: translate(0,0); }
+
+/* 第二屏 */
+.screen-2__title_animate_done{ transition: all 1s; }
+.screen-2__subtitle_animate_done,
+.screen-2__image__people_animate_done,
+.screen-2__underline_animate_done{ transition: all 1s .5s; }
+.screen-2__image__rocket{ transition: all 1s 1s ease-in; }
+.screen-2__title_animate_init,
+.screen-2__underline_animate_init,
+.screen-2__subtitle_animate_init,
+.screen-2__image__rocket_animate_init{ opacity: 0; transform: translate(0,100%); }
+.screen-2__title_animate_done,
+.screen-2__underline_animate_done,
+.screen-2__subtitle_animate_done,
+.screen-2__image__people_animate_done{ opacity: 1; transform: translate(0,0); }
+.screen-2__image__people_animate_init{ opacity: 0; transform: translate(0,0); }
+.screen-2__image__rocket_animate_done{ -webkit-animation: shake .5s 2s; -ms-animation: shake .5s 2s; }
+
+/* 第三屏 */
+.screen-3__title_animate_done,
+.screen-3__bgimg_animate_done{ transition: all 1s; }
+.screen-3__subtitle_animate_done,
+.screen-3__underline_animate_done{ transition: all 1s .5s; }
+.screen-3__class_animate_done{ transition: all 1s 1s ease-in; }
+.screen-3__title_animate_init,
+.screen-3__underline_animate_init,
+.screen-3__subtitle_animate_init,
+.screen-3__class_animate_init{ opacity: 0; transform: translate(0,100%); }
+.screen-3__title_animate_done,
+.screen-3__underline_animate_done,
+.screen-3__subtitle_animate_done{ opacity: 1; transform: translate(0,0); }
+.screen-3__bgimg_animate_init{ transform: scale(0.2); }
+.screen-3__bgimg_animate_done{ transform: scale(1); }
+.screen-3__class_animate_done{ -webkit-animation: shake .5s 2s; -ms-animation: shake .5s 2s; }
+/* 呼吸灯效果 */
+.screen-3__class__item::after,
+.screen-3__class__item::before{ display: block; content: ' '; width: 60px; height: 60px; border-radius: 50%; border: 5px solid #1f5975; animation: breatheOut 1s ease-in-out infinite; position: absolute; bottom: -4px; left: -4px; }
+.screen-3__class__item::before{ width: 64px; height: 64px; animation: breatheIn 1s ease-in-out infinite; left: -6px; top:-6px;}
+.screen-3__class__item__html5::after,
+.screen-3__class__item__html5::before{ border-color: #1f5975; }
+.screen-3__class__item__php::after,
+.screen-3__class__item__php::before{ border-color: #424d76; }
+.screen-3__class__item__java::after,
+.screen-3__class__item__java::before{ border-color: #6b4146; }
+.screen-3__class__item__python::after,
+.screen-3__class__item__python::before{ border-color: #29535f; }
+.screen-3__class__item__nodejs::after,
+.screen-3__class__item__nodejs::before{ border-color: #3e4e40; }
+
+/* 第四屏 */
+.screen-4__wrap__item1_animate_done,
+.screen-4__type__item1_animate_done,
+.screen-4__wrap__item2_animate_done,
+.screen-4__type__item2_animate_done,
+.screen-4__wrap__item3_animate_done,
+.screen-4__type__item3_animate_done,
+.screen-4__wrap__item4_animate_done,
+.screen-4__type__item4_animate_done{ transition: all 0s 0s; }
+.screen-4__title_animate_done{ transition: all 1s .5s; }
+.screen-4__subtitle_animate_done,
+.screen-4__underline_animate_done{ transition: all 1s 1s; }
+.screen-4__title_animate_init,
+.screen-4__underline_animate_init,
+.screen-4__subtitle_animate_init{ opacity: 0; transform: translate(0,100%); }
+.screen-4__title_animate_done,
+.screen-4__underline_animate_done,
+.screen-4__subtitle_animate_done{ opacity: 1; transform: translate(0,0); }
+.screen-4__wrap__item1_animate_init,
+.screen-4__type__item1_animate_init,
+.screen-4__wrap__item2_animate_init,
+.screen-4__type__item2_animate_init,
+.screen-4__wrap__item3_animate_init,
+.screen-4__type__item3_animate_init,
+.screen-4__wrap__item4_animate_init,
+.screen-4__type__item4_animate_init{ opacity: 0; transform: scale(1); }
+.screen-4__wrap__item1_animate_done,
+.screen-4__type__item1_animate_done,
+.screen-4__wrap__item2_animate_done,
+.screen-4__type__item2_animate_done,
+.screen-4__wrap__item3_animate_done,
+.screen-4__type__item3_animate_done,
+.screen-4__wrap__item4_animate_done,
+.screen-4__type__item4_animate_done{ opacity: 1; -webkit-animation: bigger .5s .5s; -ms-animation: bigger .5s .5s; }
+
+/* 第五屏 */
+.screen-5__img_animate_done{ transition: all .5s; }
+.screen-5__title_animate_done{ transition: all 1s .5s; }
+.screen-5__subtitle_animate_done,
+.screen-5__underline_animate_done{ transition: all 1s .8s; }
+.screen-5__title_animate_init,
+.screen-5__underline_animate_init,
+.screen-5__subtitle_animate_init{ opacity: 0; transform: translate(0,100%); }
+.screen-5__title_animate_done,
+.screen-5__underline_animate_done,
+.screen-5__subtitle_animate_done{ opacity: 1; transform: translate(0,0); }
+.screen-5__img_animate_init{ transform: scale(0.2); }
+.screen-5__img_animate_done{ transform: scale(1); }
